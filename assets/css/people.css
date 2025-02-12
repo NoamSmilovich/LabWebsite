@@ -1,0 +1,31 @@
+main {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted to auto-fill */
+	grid-gap: 20px;
+	justify-items: stretch; /* Ensure the items stretch across their grid area */
+	align-items: start; /* Align items to the top of their grid areas */
+	width: 100%; /* Ensure main takes full width for space-between to work */
+}
+
+main > h2 { /* Target the immediate children h2s of main */
+	grid-column: 1 / -1; /* Span all columns */
+	text-align: center; /* Center the heading */
+	margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	border: 1px solid #ccc; /* Optional */
+	padding: 15px; /* Optional */
+}
+
+.profile img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 50%; /* Make images circular */
+	margin-bottom: 10px; /* Space between image and text */
+}
