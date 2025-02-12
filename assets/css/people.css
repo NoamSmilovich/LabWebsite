@@ -1,31 +1,50 @@
 main {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted to auto-fill */
-	grid-gap: 20px;
-	justify-items: stretch; /* Ensure the items stretch across their grid area */
-	align-items: start; /* Align items to the top of their grid areas */
-	width: 100%; /* Ensure main takes full width for space-between to work */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-main > h2 { /* Target the immediate children h2s of main */
-	grid-column: 1 / -1; /* Span all columns */
-	text-align: center; /* Center the heading */
-	margin-bottom: 20px; /* Add some space below the heading */
+main > h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.section-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* For sections with single profile */
+.section-group:only-child,
+.section-group:has(.profile:only-child) {
+  display: flex;
+  justify-content: center;
+}
+
+/* For sections with exactly two profiles */
+.section-group:has(.profile:first-child:nth-last-child(2)) {
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  justify-content: space-between;
 }
 
 .profile {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	border: 1px solid #ccc; /* Optional */
-	padding: 15px; /* Optional */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .profile img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 50%; /* Make images circular */
-	margin-bottom: 10px; /* Space between image and text */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
