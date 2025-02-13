@@ -2011,7 +2011,7 @@ input, select, textarea {
 		-webkit-transition: border-color 0.2s ease-in-out;
 		-ms-transition: border-color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out;
-		background: #fff;
+		background: #cacaca;
 		border: solid 1px #e0e0e0;
 		border-radius: 5px;
 		color: inherit;
@@ -2725,11 +2725,11 @@ input, select, textarea {
 	}
 
 		.wrapper.style1 {
-			background: #fff;
+			background: #d4d4d4;
 		}
 
 		.wrapper.style2 {
-			background-color: #fff;
+			background-color: #d4d4d4;
 			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
 			background-position: top left,						bottom left,					top left;
 			background-size: 100% 6em,						100% 6em,						auto;
