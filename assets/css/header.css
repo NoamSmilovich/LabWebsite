@@ -9,22 +9,11 @@
 /* Header Styling */
 header {
   background: #ffffff; 
-  background-image: url('images/banner.jpg');
-  background-size: cover;
   color: rgb(0, 0, 0); 
-  padding: 10px 20px;
+  padding: 15px 15px;
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1000;
-}
-
-nav {
-  background-image: url('images/banner.jpg');
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  padding: 10px 20px; /* Padding for the navbar */
 }
 
 /* Flexbox Navigation */
@@ -120,6 +109,13 @@ nav {
   }
 }
 
-body {
-  background: #f7f7f7;
+
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333; /* Dark gray for readability */
+  text-align: center; /* Align the text in the center */
+  font-family: 'Roboto', sans-serif;
 }
+
